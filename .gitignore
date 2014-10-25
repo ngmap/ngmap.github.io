@@ -4,4 +4,4 @@ node_modules
 tmp
 *.log
 development/angularjs-directives
-development/app
+development/angularjs-google-maps
