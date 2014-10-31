@@ -45,6 +45,7 @@ gulp.task('build-html', function() {
     './development/layers.html',
     './development/maptypes.html'
     ])
+
     /* replace source files to a single file */
     .pipe(replace(
       /<!-- build:js ([^ ]+) -->[^\!]+<!-- endbuild -->/gm, 
@@ -52,8 +53,10 @@ gulp.task('build-html', function() {
         return '<script src="' + $1+'"></script>';
       }
     ))
+
     /* remove development only codes */
     .pipe(replace( /<!-- build:development-only -->[^!]+<!-- endbuild -->/gm, ''))
+
     /* replace ng-include to the actual contents of a file */
     .pipe(replace(
       /^[ \t]+<[\w-\'\" ]+ ng-include="'([^']+)'"[^>]*><\/[^>]+>/gm,
@@ -65,6 +68,7 @@ gulp.task('build-html', function() {
                code;
       }
     ))
+
     .pipe(gulp.dest('.'));
 });
 
