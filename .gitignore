@@ -4,5 +4,5 @@ nohup.out
 node_modules
 tmp
 *.log
-development/angularjs-directives
+development/ngd
 development/angularjs-google-maps
