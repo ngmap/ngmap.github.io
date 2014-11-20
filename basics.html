@@ -193,7 +193,7 @@
 <p class="repo-owner"><a href="//github.com/allenhwkim/angularjs-google-maps">ng-map</a> is maintained by <a href="//github.com/allenhwkim">Allen Kim</a>.</p>
 
 
-<p>This page uses <a href="/github.com/jasonlong/architect-theme">Architect theme</a>, and <a href="//github.com/allenhwkim/angularjs-directives">ngd</a></p>
+<p>This page uses <a href="/github.com/jasonlong/architect-theme">Architect theme</a>, and <a href="//github.com/allenhwkim/ngd">ngd</a></p>
 </aside>
 
 
@@ -278,8 +278,8 @@ Showing static coordinates of Chicago
   <div ngd-plnkr-code="html" ng-click="$broadcast('init-map39')">
     <div ng-controller="MapCoordinatesCtrl">
       <map init-event="init-map39" style="background:url(images/map-coordinates.png) center" 
-        center="41.850033,-87.6500523" zoom="3" on-idle="showInfoWindow(1)">
-        <info-window id="1" position="41.850033,-87.6500523">
+        center="41.850033,-87.6500523" zoom="3">
+        <info-window id="1" position="41.850033,-87.6500523" visible="true">
           <div ng-non-bindable>
             Chicago, IL<br/>
             LatLng: {{chicago.lat()}}, {{chicago.lng()}}, <br/>
@@ -294,7 +294,6 @@ Showing static coordinates of Chicago
   <div ngd-plnkr-show module-name="myapp"></div>
 </div>
 
-          <script src="javascripts/map-geolocation.js"></script>
 <!-- ========================================================= -->
 <!--           <div ng-include="'map-geolocation.html'"></div> -->
 <!-- ========================================================= -->
@@ -306,10 +305,13 @@ Note: This example requires that you consent to location sharing when
 prompted by your browser. If you see a blank space instead of the map, this
 is probably because you have denied permission for location sharing.
 <div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/map-geolocation.js"></div>
   <div ngd-plnkr-code="html" ng-click="$broadcast('init-map40')">
-    <div ng-controller="MapGeolocationCtrl">
-      <map init-event="init-map40" style="background:url(images/map-geolocation.png) center" center="0,0" zoom="6"></map>
+    <div>
+      <map init-event="init-map40" style="background:url(images/map-geolocation.png) center" center="current-location" zoom="6">
+        <info-window position="current-location" visible="true">
+          <span>Loation found using HTML5.</span>
+        </info-window>
+      </map>
     </div>
   </div>
   <div ngd-plnkr-show module-name="myapp"></div>

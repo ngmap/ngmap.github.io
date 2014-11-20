@@ -8,8 +8,8 @@ Showing static coordinates of Chicago
   <div ngd-plnkr-code="html" ng-click="$broadcast('init-map39')">
     <div ng-controller="MapCoordinatesCtrl">
       <map init-event="init-map39" style="background:url(images/map-coordinates.png) center" 
-        center="41.850033,-87.6500523" zoom="3" on-idle="showInfoWindow(1)">
-        <info-window id="1" position="41.850033,-87.6500523">
+        center="41.850033,-87.6500523" zoom="3">
+        <info-window id="1" position="41.850033,-87.6500523" visible="true">
           <div ng-non-bindable>
             Chicago, IL<br/>
             LatLng: {{chicago.lat()}}, {{chicago.lng()}}, <br/>
