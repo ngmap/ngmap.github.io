@@ -251,13 +251,6 @@ form {
   color: #474747;
 }
 
-#main-content h1:before {
-  content: "/";
-  color: #9ddcff;
-  padding-right: 0.3em;
-  margin-left: -0.9em;
-}
-
 #main-content h2 {
   font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 2em;
