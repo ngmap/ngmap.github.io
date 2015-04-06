@@ -10,7 +10,7 @@ To make hte development directory to work properly, you need to set symlinks;
 * angularjs-directives
 
 i.e.,
-`ln -s /home/alle/github/angularjs-google-maps angularjs-google-maps`
+`ln -s /home/allen/github/angularjs-google-maps angularjs-google-maps`
 
 If you did not clone the repository, please do so to set symlinks
 
