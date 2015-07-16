@@ -2,8 +2,8 @@
 <h2> Fusion Table heatmaps
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-fusiontables-heatmap">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map27')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map27')">
     <map init-event="init-map27" style="background:url(images/layer-fusiontables-heatmap.png) center" zoom="3" center="10, -140">
       <fusion-tables-layer 
         query= "{ select: 'location',
@@ -11,6 +11,6 @@
         heatmap = "{enabled: true}"
       </fusion-tables-layer>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

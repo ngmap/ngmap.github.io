@@ -2,9 +2,9 @@
 <h2>
   <a href="//developers.google.com/maps/documentation/javascript/examples/aerial-rotation">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/aerial-rotation.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map1')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/aerial-rotation.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map1')">
     <div ng-controller="AerialRotationCtrl">
       <input type="button" value="Auto Rotate" ng-click="autoRotate();">
       <map init-event="init-map1" style="background:url(images/aerial-rotation.png) center" center="45.518970, -122.672899"
@@ -14,6 +14,6 @@
         heading="90">
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

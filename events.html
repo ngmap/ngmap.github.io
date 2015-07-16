@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/plunker.css" />
 
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="//maps.googleapis.com/maps/api/js?v=3.exp&libraries=weather,visualization,panoramio"></script>
-    <script src="//code.angularjs.org/1.2.26/angular.min.js"></script>
-    <script src="//rawgit.com/allenhwkim/ngd/master/build/ngd.min.js"></script>
-    <script src="//rawgit.com/allenhwkim/ngd/master/ngdPlnkr.js"></script>
+    <script src="javascripts/angular.js"></script>
+    <script src="javascripts/ngd.js"></script>
+    <script src="javascripts/angularjs-plunker.debug.js"></script>
 
     <script src="//rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js"></script>
     <script src="javascripts/app.js"></script>
@@ -213,17 +214,17 @@
   <a href="//developers.google.com/maps/documentation/javascript/examples/event-simple">Google Source</a>
 </h2>
 Click the marker to zoom and drag and watch it comes back after 3 seconds.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/event-simple.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map12')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/event-simple.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map12')">
     <div ng-controller="EventSimpleCtrl">
       <map init-event="init-map12" style="background:url(images/event-simple.png) center" zoom="4" center="-25.363882, 131.044922" on-center-changed="centerChanged()">
         <marker position="-25.363882, 131.044922" on-click="click()" title="Click to zoom"></marker> 
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
           <script src="javascripts/event-arguments.js"></script>
 <!-- ========================================================= -->
@@ -235,16 +236,16 @@ Click the marker to zoom and drag and watch it comes back after 3 seconds.
   <a href="//developers.google.com/maps/documentation/javascript/examples/event-arguments">Google Source</a>
 </h2>
 Click map to place markers
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/event-arguments.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map10')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/event-arguments.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map10')">
     <div ng-controller="EventArgumentsCtrl">
       <map init-event="init-map10" style="background:url(images/event-arguments.png) center" zoom="4" center="-25.363882, 131.044922" on-click="placeMarker()">
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
           <script src="javascripts/event-properties.js"></script>
 <!-- ========================================================== -->
@@ -255,9 +256,9 @@ Click map to place markers
   <a href="//developers.google.com/maps/documentation/javascript/examples/event-properties">Google Source</a>
 </h2>
 When zoom level changed, the contents of infoWindow also updates.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/event-properties.js">
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map11')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/event-properties.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map11')">
     <div ng-controller="EventPropertiesCtrl">
       <map init-event="init-map11" style="background:url(images/event-properties.png) center" zoom="4" center="-25.363882, 131.044922" on-zoom_changed="zoomChanged()">
         <info-window id="1" position="-25.363882, 131.044922" visible="true">
@@ -265,9 +266,9 @@ When zoom level changed, the contents of infoWindow also updates.
         </info-window>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 
 <!-- ========================================================= -->

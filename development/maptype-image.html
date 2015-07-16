@@ -2,9 +2,9 @@
 <h2> Image map types
   <a href="//developers.google.com/maps/documentation/javascript/examples/maptype-image">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/maptype-image.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map47')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/maptype-image.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map47')">
     <div ng-controller="MapTypeImageCtrl">
       <map init-event="init-map47" style="background:url(images/maptype-image.png) center" zoom="1" center="0,0"
         street-view-control="false"
@@ -16,6 +16,6 @@
         </map-type>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

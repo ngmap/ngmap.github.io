@@ -2,8 +2,8 @@
 <h2> Fusion Tables queries
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-fusiontables-query">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map28')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map28')">
     <map init-event="init-map28" style="background:url(images/layer-fusiontables-query.png) center" zoom="12" center="41.948766, -87.691497">
       <fusion-tables-layer query="{
         select: 'address',
@@ -11,6 +11,6 @@
         where: 'ridership > 5000'}">
       </fusion-tables-layer>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

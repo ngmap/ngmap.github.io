@@ -456,30 +456,6 @@ aside#sidebar .active {
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {}
 
-*[ngd-plnkr-code]:not([src]) { // no javascrpt with src attribute
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-}
-
-*[ngd-plnkr-code="html"] {
-  min-height: 200px;
-  position: relative
-}
-
-*[ngd-plnkr-code="html"] img {
-  display:block;
-  position: absolute;
-  height: 300px;
-}
-
-*[ngd-plnkr-code]:after {
-  content: "";
-  clear:both;
-  display:table;
-}
-
 a[ngd-viewport-el]::before {
   height: 0px;
   content: " ";

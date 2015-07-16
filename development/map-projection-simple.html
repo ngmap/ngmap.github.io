@@ -2,9 +2,9 @@
 <h2>Custom map projections
   <a href="//developers.google.com/maps/documentation/javascript/examples/map-projection-simple">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/map-projection-simple.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map41')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/map-projection-simple.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map41')">
     <div ng-controller="MapProjectionSimpleCtrl">
       <map init-event="init-map41" style="background:url(images/map-projection-simple.png) center" zoom="0" center="0,0"
         on-click="alertLocation()"
@@ -17,6 +17,6 @@
         </map-type>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

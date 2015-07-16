@@ -4,9 +4,9 @@
   <a href="//developers.google.com/maps/documentation/javascript/examples/marker-remove">Google Source</a>
 </h2>
 Click on map to add a marker. Click button to show, hide, or remove markers<br/>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/marker-remove.js"></div>
-  <style ngd-plnkr-code="css">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/marker-remove.js"></plunker-code>
+  <style plunker-code type="css">
     div[ng-controller='MarkerRemoveCtrl'] {
       position: relative;
     }
@@ -21,7 +21,7 @@ Click on map to add a marker. Click button to show, hide, or remove markers<br/>
       border: 1px solid #999;
     }
   </style>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map53')">
+  <plunker-code type="html" ng-click="$broadcast('init-map53')">
     <div ng-controller="MarkerRemoveCtrl">
       <div id="panel">
         <input ng-click="hideMarkers()" type=button value="Hide Markers">
@@ -32,6 +32,6 @@ Click on map to add a marker. Click button to show, hide, or remove markers<br/>
         <marker ng-repeat="pos in positions" position="{{pos.lat}}, {{pos.lng}}"></marker>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

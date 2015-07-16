@@ -2,13 +2,13 @@
 <h2> Overlap map types
   <a href="//developers.google.com/maps/documentation/javascript/examples/maptype-overlay">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/maptype-overlay.js">
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map48')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/maptype-overlay.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map48')">
     <map init-event="init-map48" style="background:url(images/maptype-overlay.png) center" zoom="10" center="41.850033,-87.6500523">
       <overlay-map-type object="CoordMapType2" index="0">
       </overlay-map-type>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

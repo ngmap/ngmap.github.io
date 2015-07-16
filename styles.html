@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/plunker.css" />
 
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="//maps.googleapis.com/maps/api/js?v=3.exp&libraries=weather,visualization,panoramio"></script>
-    <script src="//code.angularjs.org/1.2.26/angular.min.js"></script>
-    <script src="//rawgit.com/allenhwkim/ngd/master/build/ngd.min.js"></script>
-    <script src="//rawgit.com/allenhwkim/ngd/master/ngdPlnkr.js"></script>
+    <script src="javascripts/angular.js"></script>
+    <script src="javascripts/ngd.js"></script>
+    <script src="javascripts/angularjs-plunker.debug.js"></script>
 
     <script src="//rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js"></script>
     <script src="javascripts/app.js"></script>
@@ -210,12 +211,12 @@
 <h2>Simple Styled Map
   <a href="//developers.google.com/maps/documentation/javascript/examples/maptype-styled-simple">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map50')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map50')">
     <map init-event="init-map50" style="background:url(images/maptype-styled-simple.png) center" center="40.6743890, -73.9455" zoom="12" styles="[{stylers:[{hue:'#890000'},{visibility:'simplified'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers:[{visibility:'off'}]},{featureType:'water',stylers:[{color:'#890000'}]}]"></map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- ================================================================ -->
 <!--           <div ng-include="'maptype-styled-complex.html'"></div> -->
@@ -224,12 +225,12 @@
 <h2>Complex Styled Map
   <a href="//developers.google.com/maps/documentation/javascript/examples/maptype-styled-complex">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map49')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map49')">
     <map init-event="init-map49" style="background:url(images/maptype-styled-complex.png) center" center="41.850033, -87.650052" zoom="12" styles="[{featureType:'road.highway',elementType:'geometry',stylers:[{hue:'#ff0022'},{saturation:60},{lightness:-20}]},{featureType:'road.arterial',elementType:'all',stylers:[{hue:'#2200ff'},{lightness:-40},{visibility:'simplified'},{saturation:30}]},{featureType:'road.local',elementType:'all',stylers:[{hue:'#f6ff00'},{saturation:50},{gamma:0.7},{visibility:'simplified'}]},{featureType:'water',elementType:'geometry',stylers:[{saturation:40},{lightness:40}]},{featureType:'road.highway',elementType:'labels',stylers:[{visibility:'on'},{saturation:98}]},{featureType:'administrative.locality',elementType:'labels',stylers:[{hue:'#0022ff'},{saturation:50},{lightness:-10},{gamma:0.90}]},{featureType:'transit.line',elementType:'geometry',stylers:[{hue:'#ff0000'},{visibility:'on'},{lightness:-70}]}]"></map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 
 <!-- ========================================================= -->

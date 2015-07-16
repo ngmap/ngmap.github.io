@@ -2,9 +2,9 @@
 <h2> KML feature details
   <a href="https://developers.google.com/maps/documentation/javascript/examples/layer-kml-features">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/layer-kml-features.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map33')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/layer-kml-features.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map33')">
     <div ng-controller="LayerKmlFeaturesCtrl">
       <map init-event="init-map33" style="background:url(images/layer-kml-features.png) center" zoom="12" center="37.06, -95.68">
         <kml-layer on-click="showInContextWindow()"
@@ -12,6 +12,6 @@
       </map>
       {{description}}
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

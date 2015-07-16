@@ -4,13 +4,13 @@
   <a href="//developers.google.com/maps/documentation/javascript/examples/event-arguments">Google Source</a>
 </h2>
 Click map to place markers
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/event-arguments.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map10')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/event-arguments.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map10')">
     <div ng-controller="EventArgumentsCtrl">
       <map init-event="init-map10" style="background:url(images/event-arguments.png) center" zoom="4" center="-25.363882, 131.044922" on-click="placeMarker()">
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

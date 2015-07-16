@@ -1,4 +1,4 @@
-var app = angular.module("myapp",["ngMap", "ngd"]);
+var app = angular.module("myapp",["ngd", "ngMap", "angularjs-plunker"]);
 
 app.run(function($location, $rootScope, $anchorScroll) {
   try {
@@ -20,12 +20,12 @@ app.run(function($location, $rootScope, $anchorScroll) {
 /**
  * config plnkr
  */
-app.config(function(PlnkrDefaultProvider) {
-  PlnkrDefaultProvider.setLibs([ /* plunker default libraries */
+app.config(function(plunkerProvider) {
+  plunkerProvider.setLibs([ /* plunker default libraries */
     "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=weather,visualization,panoramio",
     "http://code.angularjs.org/1.2.25/angular.js",
     "https://rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.js"
   ]);
-  PlnkrDefaultProvider.setAppJs("var app=angular.module('myapp', ['ngMap']);");
+  plunkerProvider.setAppJs("var app=angular.module('myapp', ['ngMap']);");
 });
 

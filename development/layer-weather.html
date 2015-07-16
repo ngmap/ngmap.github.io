@@ -2,12 +2,12 @@
 <h2> Weather Layer
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-weather">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map38')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map38')">
     <map init-event="init-map38" style="background:url(images/layer-weather.png) center" zoom="6" center="49.265984,-123.127491">
       <weather-layer temperature-units="FAHRENHEIT"></weather-layer>
       <cloud-layer></cloud-layer>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

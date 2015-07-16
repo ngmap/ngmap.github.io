@@ -2,9 +2,9 @@
 <h2>Complex Icon
   <a href="//developers.google.com/maps/documentation/javascript/examples/icon-complex">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/icon-complex.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map14')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/icon-complex.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map14')">
     <div ng-controller="IconComplexCtrl">
       <map init-event="init-map14" style="background:url(images/icon-complex.png) center" zoom="10" center="-33.9, 151.2">
         <marker ng-repeat="beach in beaches"
@@ -15,6 +15,6 @@
           z-index="{{beach[3]}}"></marker>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

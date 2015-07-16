@@ -2,8 +2,8 @@
 <h2> Remove a polyline
   <a href="//developers.google.com/maps/documentation/javascript/examples/polyline-remove">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <style ngd-plnkr-code="css">
+<plunker module-name="myapp">
+  <style plunker-code type="css">
     div[ng-controller=PolylineRemoveCtrl] {
       position: relative;
     }
@@ -18,8 +18,8 @@
       border: 1px solid #999;
     }
   </style>
-  <div ngd-plnkr-code="js" src="javascripts/polyline-remove.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map70')">
+  <plunker-code type="js" src="javascripts/polyline-remove.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map70')">
     <div ng-controller="PolylineRemoveCtrl">
       <div id="panel">
         <input ng-click="removeLine()" type=button value="Remove Line">
@@ -40,6 +40,6 @@
         </shape>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

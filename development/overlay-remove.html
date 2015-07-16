@@ -2,9 +2,9 @@
 <h2> Remove Overlay
   <a href="//developers.google.com/maps/documentation/javascript/examples/overlay-remove">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/overlay-remove.js"></div>
-  <style ngd-plnkr-code="css">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/overlay-remove.js"></plunker-code>
+  <style plunker-code type="css">
     div[ng-controller=OverlayRemoveCtrl] {
       position: relative;
     }
@@ -19,7 +19,7 @@
       border: 1px solid #999;
     }
   </style>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map58')">
+  <plunker-code type="html" ng-click="$broadcast('init-map58')">
     <div ng-controller="OverlayRemoveCtrl">
       <div id="panel">
         <input ng-click="remove()" type=button value="Remove overlay">
@@ -32,8 +32,8 @@
        </shape>
      </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 

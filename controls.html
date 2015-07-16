@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/plunker.css" />
 
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="//maps.googleapis.com/maps/api/js?v=3.exp&libraries=weather,visualization,panoramio"></script>
-    <script src="//code.angularjs.org/1.2.26/angular.min.js"></script>
-    <script src="//rawgit.com/allenhwkim/ngd/master/build/ngd.min.js"></script>
-    <script src="//rawgit.com/allenhwkim/ngd/master/ngdPlnkr.js"></script>
+    <script src="javascripts/angular.js"></script>
+    <script src="javascripts/ngd.js"></script>
+    <script src="javascripts/angularjs-plunker.debug.js"></script>
 
     <script src="//rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js"></script>
     <script src="javascripts/app.js"></script>
@@ -210,12 +211,12 @@
 <h2>Disabling the default UI
   <a href="//developers.google.com/maps/documentation/javascript/examples/control-disableUI">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map6')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map6')">
     <map init-event="init-map6" style="background:url(images/control-disableUI.png) center" center="-33, 151" zoom="4" disable-default-u-i="true" />
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunkere>
 
 <!-- ======================================================== -->
 <!--           <div ng-include="'control-simple.html'"></div> -->
@@ -224,16 +225,16 @@
 <h2> Adding controls to the map
   <a href="//developers.google.com/maps/documentation/javascript/examples/control-simple">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map9')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map9')">
     <map init-event="init-map9" style="background:url(images/control-simple.png) center" center="-33, 151" zoom="4" 
       pan-control="false"
       zoom-control="false"
       scale-control="true">
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- ========================================================= -->
 <!--           <div ng-include="'control-options.html'"></div> -->
@@ -242,8 +243,8 @@
 <h2>Control options
   <a href="//developers.google.com/maps/documentation/javascript/examples/control-options">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map7')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map7')">
     <map init-event="init-map7" style="background:url(images/control-options.png) center" center="-33, 151" zoom="4" 
       pan-control="true"
       map-type-control="true"
@@ -251,9 +252,9 @@
       zoom-control="true"
       zoom-control-options="{style:'SMALL'}">
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- ============================================================= -->
 <!--           <div ng-include="'control-positioning.html'"></div> -->
@@ -262,8 +263,8 @@
 <h2>Control Positioning
   <a href="//developers.google.com/maps/documentation/javascript/examples/control-positioning">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map8')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map8')">
     <map init-event="init-map8" style="background:url(images/control-positioning.png) center" center="-28.643387, 153.612224" zoom="12" 
       pan-control="true"
       pan-control-options="{position:'TOP_RIGHT'}"
@@ -275,9 +276,9 @@
       street-view-control="true"
       street-view-control-options="{position:'LEFT_TOP'}">
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
           <script src="javascripts/control-custom.js"></script>
 <!-- ======================================================== -->
@@ -289,9 +290,9 @@
 </h2>
 This custom control simply returns the user to Chicago when clicked.
 Drag map around, then click 'home' button to go back to Chicago.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/control-custom.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map5')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/control-custom.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map5')">
     <div ng-controller="ControlCustomCtrl">
       <map init-event="init-map5" style="background:url(images/control-custom.png) center" center="41.850033, -87.6500523" zoom="6">
         <custom-control id="home" position="TOP_RIGHT" index="1" on-click="click()">
@@ -299,9 +300,9 @@ Drag map around, then click 'home' button to go back to Chicago.
         </custom-control>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
           <script src="javascripts/control-custom-state.js"></script>
 <!-- ============================================================== -->
@@ -312,9 +313,9 @@ Drag map around, then click 'home' button to go back to Chicago.
   <a href="//developers.google.com/maps/documentation/javascript/examples/control-custom-state">Google Source</a>
 </h2>
 Adds a control to the map that returns the user to the control's defined home
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/control-custom-state.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map4')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/control-custom-state.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map4')">
     <div ng-controller="ControlCustomStateCtrl">
       <map init-event="init-map4" style="background:url(images/control-custom-state.png) center" center="41.850033, -87.6500523" zoom="6">
         <custom-control id="go-home" position="TOP_RIGHT" index="1" on-click="goHome()">
@@ -325,9 +326,9 @@ Adds a control to the map that returns the user to the control's defined home
         </custom-control>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 
 <!-- ========================================================= -->

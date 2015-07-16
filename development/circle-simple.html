@@ -3,9 +3,9 @@
   <a href="//developers.google.com/maps/documentation/javascript/examples/circle-simple">Google Source</a>
 </h2>
 This example creates circles on the map, representing populations in North America.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/circle-simple.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map3')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/circle-simple.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map3')">
     <div ng-controller="CircleSimpleCtrl">
       <map init-event="init-map3" style="background:url(images/circle-simple.png) center" center="37.09024, -95.712891" zoom="4" mayTypeId="TERRAIN">
         <shape name="circle" ng-repeat="city in cities"
@@ -19,6 +19,6 @@ This example creates circles on the map, representing populations in North Ameri
         </shape>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

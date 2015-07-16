@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/plunker.css" />
 
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="//maps.googleapis.com/maps/api/js?v=3.exp&libraries=weather,visualization"></script>
-    <script src="//code.angularjs.org/1.2.26/angular.min.js"></script>
-    <script src="//rawgit.com/allenhwkim/ngd/master/build/ngd.min.js"></script>
-    <script src="//rawgit.com/allenhwkim/ngd/master/ngdPlnkr.js"></script>
+    <script src="javascripts/angular.js"></script>
+    <script src="javascripts/ngd.js"></script>
+    <script src="javascripts/angularjs-plunker.debug.js"></script>
 
     <script src="//rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js"></script>
     <script src="javascripts/app.js"></script>
@@ -210,14 +211,14 @@
 <h2>KML Layer
   <a href="https://developers.google.com/maps/documentation/javascript/examples/layer-kml">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map34')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map34')">
       <map init-event="init-map34" style="background:url(images/layer-kml.png) center" zoom="11" center="41.875696,-87.624207">
         <kml-layer url="http://gmaps-samples.googlecode.com/svn/trunk/ggeoxml/cta.kml"></kml-layer>
       </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
           <script src="javascripts/layer-kml-features.js"></script>
 <!-- ============================================================ -->
@@ -227,9 +228,9 @@
 <h2> KML feature details
   <a href="https://developers.google.com/maps/documentation/javascript/examples/layer-kml-features">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/layer-kml-features.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map33')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/layer-kml-features.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map33')">
     <div ng-controller="LayerKmlFeaturesCtrl">
       <map init-event="init-map33" style="background:url(images/layer-kml-features.png) center" zoom="12" center="37.06, -95.68">
         <kml-layer on-click="showInContextWindow()"
@@ -237,9 +238,9 @@
       </map>
       {{description}}
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- =========================================================== -->
 <!--           <div ng-include="'layer-data-simple.html'"></div> -->
@@ -248,14 +249,14 @@
 <h2> Data Layer (Simple)
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-data-simple">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map24')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map24')">
     <map init-event="init-map24" style="background:url(images/layer-data-simple.png) center" zoom="4" center="-28, 137.883">
       <map-data load-geo-json="https://storage.googleapis.com/maps-devrel/google.json"></map-data>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- ========================================================== -->
 <!--           <div ng-include="'layer-data-style.html'"></div> -->
@@ -264,15 +265,15 @@
 <h2> Data Layer: Styling
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-data-style">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map25')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map25')">
       <map init-event="init-map25" style="background:url(images/layer-data-style.png) center" zoom="4" center="-28, 137.883">
         <map-data set-style="{fillColor: 'green', strokeWeight: 1}"
           load-geo-json="https://storage.googleapis.com/maps-devrel/google.json"></map-data>
       </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
           <script src="javascripts/layer-data-event.js"></script>
 <!-- ========================================================== -->
@@ -282,9 +283,9 @@
 <h2> Data Layer: Event Handling
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-data-event">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/layer-data-event.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map20')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/layer-data-event.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map20')">
     <div ng-controller="LayerDataEventCtrl">
       <map init-event="init-map20" style="background:url(images/layer-data-event.png) center" zoom="4" center="-28, 137.883">
         <map-data 
@@ -294,9 +295,9 @@
       </map>
       <h1>{{letter}}</h1>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
           <script src="javascripts/layer-data-dynamic.js"></script>
 <!-- ============================================================ -->
@@ -306,9 +307,9 @@
 <h2> Data Layer: Dynamic Styling
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-data-dynamic">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/layer-data-dynamic.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map19')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/layer-data-dynamic.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map19')">
     <div ng-controller="LayerDataDynamicCtrl">
       <map init-event="init-map19" style="background:url(images/layer-data-dynamic.png) center" zoom="4" center="-28, 137.883">
         <map-data 
@@ -320,9 +321,9 @@
       </map>
       <h1>{{letter}}</h1>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- =================================================================== -->
 <!--           <div ng-include="'layer-data-quakes-default.html'"></div> -->
@@ -331,14 +332,14 @@
 <h2> Data Layer: Earthquake data
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-data-quakes">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map22')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map22')">
     <map init-event="init-map22" style="background:url(images/layer-data-quakes-default.png) center" zoom="3" center="20, -160">
       <map-data load-geo-json="javascripts/quakes.geo.json"></map-data>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
           <script src="javascripts/layer-data-quakes-simple.js"></script>
 <!-- ================================================================== -->
@@ -348,9 +349,9 @@
 <h2> Data Layer: Earthquake data
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-data-quakes">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/layer-data-quakes-simple.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map23')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/layer-data-quakes-simple.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map23')">
     <div ng-controller="LayerDataQuakesSimpleCtrl">
       <map init-event="init-map23" style="background:url(images/layer-data-quakes-simple.png) center" zoom="3" center="20, -160">
         <map-data 
@@ -358,9 +359,9 @@
           load-geo-json="javascripts/quakes.geo.json"></map-data>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
           <script src="javascripts/layer-data-quakes-advanced.js"></script>
 <!-- ==================================================================== -->
@@ -370,9 +371,9 @@
 <h2> Data Layer: Earthquake data (Advanced)
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-data-quakes">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/layer-data-quakes-advanced.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map21')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/layer-data-quakes-advanced.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map21')">
     <div ng-controller="LayerDataQuakesAdvCtrl">
       <map init-event="init-map21" style="background:url(images/layer-data-quakes-advanced.png) center" zoom="3" center="20, -160"
         styles="[{
@@ -397,9 +398,9 @@
           load-geo-json="javascripts/quakes.geo.json"></map-data>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
           <script src="javascripts/taxi-data.js"></script>
           <script src="javascripts/layer-heatmap.js"></script>
@@ -410,8 +411,8 @@
 <h2> Heatmaps
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-heatmap">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <style ngd-plnkr-code="css">
+<plunker module-name="myapp">
+  <style plunker-code type="css">
     div[ng-controller=LayerHeatmapCtrl] {
       position:relative;
     }
@@ -426,9 +427,9 @@
       border: 1px solid #999;
     }
   </style>
-  <div ngd-plnkr-code="js" src="javascripts/layer-heatmap.js"></div>
-  <div ngd-plnkr-lib="https://rawgit.com/allenhwkim/angularjs-google-maps/gh-pages/javascripts/taxi-data.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map32')">
+  <plunker-code type="js" src="javascripts/layer-heatmap.js"></plunker-code>
+  <plunker-lib src="https://rawgit.com/allenhwkim/angularjs-google-maps/gh-pages/javascripts/taxi-data.js"></plunker-lib>
+  <plunker-code type="html" ng-click="$broadcast('init-map32')">
     <div ng-controller="LayerHeatmapCtrl">
       <div id="panel">
         <button ng-click="toggleHeatmap()">Toggle Heatmap</button>
@@ -440,9 +441,9 @@
         <heatmap-layer id="foo" data="taxiData"></heatmap>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- ========================================================== -->
 <!--           <div ng-include="'layer-mapsengine.html'"></div> -->
@@ -451,16 +452,16 @@
 <h2> Maps Engine Layer 
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-mapsengine">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map35')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map35')">
     <map init-event="init-map35" style="background:url(images/layer-mapsengine.png) center" center="59.322506, 18.010025" zoom="14">
       <maps-engine-layer
         layer-id="06673056454046135537-08896501997766553811">
       </maps-engine-layer>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
           <script src="javascripts/layer-dynamicmapsengine.js"></script>
 <!-- ================================================================= -->
@@ -470,9 +471,9 @@
 <h2> Dynamic Maps Engine Layer
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-dynamicmapsengine">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/layer-dynamicmapsengine.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map26')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/layer-dynamicmapsengine.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map26')">
     <div ng-controller="LayerDynamicMapsEngineCtrl">
       <map init-event="init-map26" style="background:url(images/layer-dynamicmapsengine.png) center" center="59.322506, 18.010025" zoom="14">
         <dynamic-maps-engine-layer
@@ -484,9 +485,9 @@
         </dynamic-maps-engine-layer>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- ======================================================================== -->
 <!--           <div ng-include="'mapsenginelayer-noauth-layerid.html'"></div> -->
@@ -495,8 +496,8 @@
 <h2> Maps Engine layers by layer ID
   <a href="//developers.google.com/maps/documentation/javascript/examples/mapsenginelayer-noauth-layerid">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map43')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map43')">
     <map init-event="init-map43" style="background:url(images/mapsenginelayer-noauth-layerid.png) center" center="42, -99" zoom="5">
       <maps-engine-layer
         clickable="true"
@@ -507,9 +508,9 @@
         layer-id="10446176163891957399-01658747114625264102">
       </maps-engine-layer>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- ========================================================================= -->
 <!--           <div ng-include="'mapsenginelayer-noauth-layerkey.html'"></div> -->
@@ -518,8 +519,8 @@
 <h2> Maps Engine layers by layer key
   <a href="//developers.google.com/maps/documentation/javascript/examples/mapsenginelayer-noauth-layerkey">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map44')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map44')">
     <map init-event="init-map44" style="background:url(images/mapsenginelayer-noauth-layerkey.png) center" center="42, -99" zoom="5">
       <maps-engine-layer
         map-id="10446176163891957399-13516001307527776624-4"
@@ -532,9 +533,9 @@
         layer-key="layer_00002">
       </maps-engine-layer>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- =================================================================== -->
 <!--           <div ng-include="'layer-fusiontables-simple.html'"></div> -->
@@ -543,17 +544,17 @@
 <h2> Fusion Tables layers
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-fusiontables-simple">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map29')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map29')">
     <map init-event="init-map29" style="background:url(images/layer-fusiontables-simple.png) center" zoom="11" center="41.850033, -87.6500523">
       <fusion-tables-layer query="{
         select: 'Geocodable address',
         from: '1mZ53Z70NsChnBMm-qEYmSDOvLXgrreLTkQUvvg'}">
       </fusion-tables-layer>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- ================================================================== -->
 <!--           <div ng-include="'layer-fusiontables-query.html'"></div> -->
@@ -562,8 +563,8 @@
 <h2> Fusion Tables queries
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-fusiontables-query">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map28')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map28')">
     <map init-event="init-map28" style="background:url(images/layer-fusiontables-query.png) center" zoom="12" center="41.948766, -87.691497">
       <fusion-tables-layer query="{
         select: 'address',
@@ -571,9 +572,9 @@
         where: 'ridership > 5000'}">
       </fusion-tables-layer>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- ==================================================================== -->
 <!--           <div ng-include="'layer-fusiontables-heatmap.html'"></div> -->
@@ -582,8 +583,8 @@
 <h2> Fusion Table heatmaps
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-fusiontables-heatmap">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map27')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map27')">
     <map init-event="init-map27" style="background:url(images/layer-fusiontables-heatmap.png) center" zoom="3" center="10, -140">
       <fusion-tables-layer 
         query= "{ select: 'location',
@@ -591,9 +592,9 @@
         heatmap = "{enabled: true}"
       </fusion-tables-layer>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- ==================================================================== -->
 <!--           <div ng-include="'layer-fusiontables-styling.html'"></div> -->
@@ -602,8 +603,8 @@
 <h2> Fusion Tables styling
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-fusiontables-styling">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map30')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map30')">
     <map init-event="init-map30" style="background:url(images/layer-fusiontables-styling.png) center" zoom="4" center="-25, 133">
       <fusion-tables-layer 
         query= "{
@@ -627,9 +628,9 @@
         }]">
       </fusion-tables-layer>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- ====================================================== -->
 <!--           <div ng-include="'layer-georss.html'"></div> -->
@@ -638,16 +639,16 @@
 <h2> GeoRSS layers
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-georss">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map31')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map31')">
     <map init-event="init-map31" style="background:url(images/layer-georss.png) center" zoom="4" center="49.496675,-102.65625">
       <kml-layer 
         url="http://api.flickr.com/services/feeds/geo/?g=322338@N20&lang=en-us&format=feed-georss">
       </kml-layer>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- ======================================================= -->
 <!--           <div ng-include="'layer-traffic.html'"></div> -->
@@ -656,14 +657,14 @@
 <h2> Traffic Layer
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-traffic">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map36')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map36')">
     <map init-event="init-map36" style="background:url(images/layer-traffic.png) center" zoom="13" center="34.04924594193164, -118.24104309082031">
       <traffic-layer></traffic-layer>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- ======================================================= -->
 <!--           <div ng-include="'layer-transit.html'"></div> -->
@@ -672,14 +673,14 @@
 <h2> Transit Layer
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-transit">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map37')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map37')">
     <map init-event="init-map37" style="background:url(images/layer-transit.png) center" zoom="13" center="51.501904,-0.115871">
       <transit-layer></transit-layer>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- ======================================================= -->
 <!--           <div ng-include="'layer-weather.html'"></div> -->
@@ -688,15 +689,15 @@
 <h2> Weather Layer
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-weather">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map38')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map38')">
     <map init-event="init-map38" style="background:url(images/layer-weather.png) center" zoom="6" center="49.265984,-123.127491">
       <weather-layer temperature-units="FAHRENHEIT"></weather-layer>
       <cloud-layer></cloud-layer>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- ========================================================= -->
 <!--           <div ng-include="'layer-bicycling.html'"></div> -->
@@ -705,14 +706,14 @@
 <h2> Bicycle Layer
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-bicycling">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map18')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map18')">
     <map init-event="init-map18" style="background:url(images/layer-bicycling.png) center" zoom="14" center="42.3726399, -71.1096528">
       <bicycling-layer></bicycling-layer>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 
 <!-- ========================================================= -->

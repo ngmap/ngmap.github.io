@@ -5,8 +5,8 @@
 Note: This example requires that you consent to location sharing when
 prompted by your browser. If you see a blank space instead of the map, this
 is probably because you have denied permission for location sharing.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map40')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map40')">
     <div>
       <map init-event="init-map40" style="background:url(images/map-geolocation.png) center" center="current-location" zoom="6">
         <info-window position="current-location" visible="true">
@@ -14,7 +14,7 @@ is probably because you have denied permission for location sharing.
         </info-window>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 

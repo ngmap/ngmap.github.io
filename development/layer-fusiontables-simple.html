@@ -2,14 +2,14 @@
 <h2> Fusion Tables layers
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-fusiontables-simple">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map29')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map29')">
     <map init-event="init-map29" style="background:url(images/layer-fusiontables-simple.png) center" zoom="11" center="41.850033, -87.6500523">
       <fusion-tables-layer query="{
         select: 'Geocodable address',
         from: '1mZ53Z70NsChnBMm-qEYmSDOvLXgrreLTkQUvvg'}">
       </fusion-tables-layer>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

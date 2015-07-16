@@ -2,13 +2,13 @@
 <h2>
   <a href="//developers.google.com/maps/documentation/javascript/examples/maptype-image-overlay">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/maptype-image-overlay.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map46')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/maptype-image-overlay.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map46')">
     <map init-event="init-map46" style="background:url(images/maptype-image-overlay.png) center" zoom="18" center="37.78313383212, -122.4039494991302">
       <overlay-map-type object="imageMapType" init-method="push">
       </overlay-map-type>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

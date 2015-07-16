@@ -5,8 +5,8 @@
    This example uses SVG path notation to add a vector-based symbol
    as the icon for a marker. The resulting icon is a star-shaped symbol
    with a pale yellow fill and a thick yellow border.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map55')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map55')">
     <map init-event="init-map55" style="background:url(images/marker-symbol-custom.png) center" center="-25.363882,131.044922" zoom="4">
       <marker position="-25.363882,131.044922" 
       icon="{
@@ -19,6 +19,6 @@
       }"
       dragglele="true"></marker>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

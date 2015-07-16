@@ -6,9 +6,9 @@ If you're adding a number of markers, you may want to
 drop them on the map consecutively rather than all at once.
 This example shows how to use setTimeout() to space
 your markers' animation.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/marker-animations-iteration.js"></div>
-  <style ngd-plnkr-code="css">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/marker-animations-iteration.js"></plunker-code>
+  <style plunker-code type="css">
     div[ng-controller] {
       position: relative;
     }
@@ -23,7 +23,7 @@ your markers' animation.
       border: 1px solid #999;
     }
   </style>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map51')">
+  <plunker-code type="html" ng-click="$broadcast('init-map51')">
     <div ng-controller="MarkerAnimationsIterationCtrl">
       <div id="panel">
         <button id="drop" ng-click="addMarker()">Drop Markers</button>
@@ -31,6 +31,6 @@ your markers' animation.
       <map init-event="init-map51" style="background:url(images/marker-animations-iteration.png) center" center="52.520816, 13.410186" zoom="12">
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

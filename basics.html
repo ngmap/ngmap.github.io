@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-
+    <link rel="stylesheet" type="text/css" href="stylesheets/plunker.css" />
+    
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="//maps.googleapis.com/maps/api/js?v=3.exp&libraries=weather,visualization,panoramio"></script>
-    <script src="//code.angularjs.org/1.2.26/angular.min.js"></script>
-    <script src="//rawgit.com/allenhwkim/ngd/master/build/ngd.min.js"></script>
-    <script src="//rawgit.com/allenhwkim/ngd/master/ngdPlnkr.js"></script>
+    <script src="javascripts/angular.js"></script>
+    <script src="javascripts/ngd.js"></script>
+    <script src="javascripts/angularjs-plunker.debug.js"></script>
 
     <script src="//rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js"></script>
     <script src="javascripts/app.js"></script>
@@ -299,12 +300,12 @@
 <h2>Simple Map
   <a href="//developers.google.com/maps/documentation/javascript/examples/map-simple">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map42')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map42')">
     <map init-event="init-map42" style="background:url(images/map-simple.png) center" center="-34.397, 150.644" zoom="8"></map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
           <script src="javascripts/map-coordinates.js"></script>
 <!-- ========================================================= -->
@@ -315,9 +316,9 @@
   <a href="#">Google Source</a>
 </h2>
 Showing static coordinates of Chicago
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/map-coordinates.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map39')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/map-coordinates.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map39')">
     <div ng-controller="MapCoordinatesCtrl">
       <map init-event="init-map39" style="background:url(images/map-coordinates.png) center" 
         center="41.850033,-87.6500523" zoom="3">
@@ -332,9 +333,9 @@ Showing static coordinates of Chicago
         </info-window>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 <!-- ========================================================= -->
 <!--           <div ng-include="'map-geolocation.html'"></div> -->
@@ -346,8 +347,8 @@ Showing static coordinates of Chicago
 Note: This example requires that you consent to location sharing when
 prompted by your browser. If you see a blank space instead of the map, this
 is probably because you have denied permission for location sharing.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map40')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map40')">
     <div>
       <map init-event="init-map40" style="background:url(images/map-geolocation.png) center" center="current-location" zoom="6">
         <info-window position="current-location" visible="true">
@@ -355,9 +356,9 @@ is probably because you have denied permission for location sharing.
         </info-window>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 
           <script src="javascripts/map-projection-simple.js"></script>
@@ -368,9 +369,9 @@ is probably because you have denied permission for location sharing.
 <h2>Custom map projections
   <a href="//developers.google.com/maps/documentation/javascript/examples/map-projection-simple">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/map-projection-simple.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map41')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/map-projection-simple.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map41')">
     <div ng-controller="MapProjectionSimpleCtrl">
       <map init-event="init-map41" style="background:url(images/map-projection-simple.png) center" zoom="0" center="0,0"
         on-click="alertLocation()"
@@ -383,9 +384,9 @@ is probably because you have denied permission for location sharing.
         </map-type>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 
 <!-- ========================================================= -->

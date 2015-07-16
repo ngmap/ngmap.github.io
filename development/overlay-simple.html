@@ -2,13 +2,13 @@
 <h2> Simple Overlay
   <a href="//developers.google.com/maps/documentation/javascript/examples/overlay-simple">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/overlay-simple.js"></div>
-  <div ngd-plnkr-lib="//ngmap.github.io/javascripts/USGSOverlay.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map59')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/overlay-simple.js"></plunker-code>
+  <plunker-lib src="//ngmap.github.io/javascripts/USGSOverlay.js"></plunker-lib>
+  <plunker-code type="html" ng-click="$broadcast('init-map59')">
     <div ng-controller="OverlaySimpleCtrl">
       <map init-event="init-map59" style="background:url(images/overlay-simple.png) center" zoom="11" center="62.323907, -150.109291" map-type-id="SATELLITE"></map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

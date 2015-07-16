@@ -2,9 +2,9 @@
 <h2> Animating Symbols
   <a href="//developers.google.com/maps/documentation/javascript/examples/overlay-symbol-animate">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/overlay-symbol-animate.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map60')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/overlay-symbol-animate.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map60')">
     <div ng-controller="OverlaySymbolAnimateCtrl">
       <map init-event="init-map60" style="background:url(images/overlay-symbol-animate.png) center" zoom="5" center="20.291, 153.027" map-type-id="TERRAIN">
         <shape name="polyline" id="foo"
@@ -20,6 +20,6 @@
         </shape>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

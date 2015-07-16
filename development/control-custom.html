@@ -4,9 +4,9 @@
 </h2>
 This custom control simply returns the user to Chicago when clicked.
 Drag map around, then click 'home' button to go back to Chicago.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/control-custom.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map5')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/control-custom.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map5')">
     <div ng-controller="ControlCustomCtrl">
       <map init-event="init-map5" style="background:url(images/control-custom.png) center" center="41.850033, -87.6500523" zoom="6">
         <custom-control id="home" position="TOP_RIGHT" index="1" on-click="click()">
@@ -14,6 +14,6 @@ Drag map around, then click 'home' button to go back to Chicago.
         </custom-control>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

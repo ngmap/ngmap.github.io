@@ -2,8 +2,8 @@
 <h2> Heatmaps
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-heatmap">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <style ngd-plnkr-code="css">
+<plunker module-name="myapp">
+  <style plunker-code type="css">
     div[ng-controller=LayerHeatmapCtrl] {
       position:relative;
     }
@@ -18,9 +18,9 @@
       border: 1px solid #999;
     }
   </style>
-  <div ngd-plnkr-code="js" src="javascripts/layer-heatmap.js"></div>
-  <div ngd-plnkr-lib="https://rawgit.com/allenhwkim/angularjs-google-maps/gh-pages/javascripts/taxi-data.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map32')">
+  <plunker-code type="js" src="javascripts/layer-heatmap.js"></plunker-code>
+  <plunker-lib src="https://rawgit.com/allenhwkim/angularjs-google-maps/gh-pages/javascripts/taxi-data.js"></plunker-lib>
+  <plunker-code type="html" ng-click="$broadcast('init-map32')">
     <div ng-controller="LayerHeatmapCtrl">
       <div id="panel">
         <button ng-click="toggleHeatmap()">Toggle Heatmap</button>
@@ -32,6 +32,6 @@
         <heatmap-layer id="foo" data="taxiData"></heatmap>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

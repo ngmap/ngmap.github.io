@@ -3,9 +3,9 @@
   <a href="//developers.google.com/maps/documentation/javascript/examples/event-properties">Google Source</a>
 </h2>
 When zoom level changed, the contents of infoWindow also updates.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/event-properties.js">
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map11')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/event-properties.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map11')">
     <div ng-controller="EventPropertiesCtrl">
       <map init-event="init-map11" style="background:url(images/event-properties.png) center" zoom="4" center="-25.363882, 131.044922" on-zoom_changed="zoomChanged()">
         <info-window id="1" position="-25.363882, 131.044922" visible="true">
@@ -13,6 +13,6 @@ When zoom level changed, the contents of infoWindow also updates.
         </info-window>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

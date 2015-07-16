@@ -5,9 +5,9 @@
 The following example creates a marker in Stockholm, Sweden
 using a DROP animation. Clicking on the marker will toggle
 the animation between a BOUNCE animation and no animation.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/marker-animations.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map52')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/marker-animations.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map52')">
     <div ng-controller="MarkerAnimationsCtrl">
       <map init-event="init-map52" style="background:url(images/marker-animations.png) center" center="59.32522, 18.07002" zoom="13">
         <marker position="59.327383, 18.06747" 
@@ -16,6 +16,6 @@ the animation between a BOUNCE animation and no animation.
           draggable="true"></marker>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

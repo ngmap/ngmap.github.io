@@ -2,12 +2,12 @@
 <h2> Data Layer: Styling
   <a href="//developers.google.com/maps/documentation/javascript/examples/layer-data-style">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map25')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map25')">
       <map init-event="init-map25" style="background:url(images/layer-data-style.png) center" zoom="4" center="-28, 137.883">
         <map-data set-style="{fillColor: 'green', strokeWeight: 1}"
           load-geo-json="https://storage.googleapis.com/maps-devrel/google.json"></map-data>
       </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

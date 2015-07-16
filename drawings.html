@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/plunker.css" />
 
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="//maps.googleapis.com/maps/api/js?v=3.exp&libraries=weather,visualization,panoramio"></script>
-    <script src="//code.angularjs.org/1.2.26/angular.min.js"></script>
-    <script src="//rawgit.com/allenhwkim/ngd/master/build/ngd.min.js"></script>
-    <script src="//rawgit.com/allenhwkim/ngd/master/ngdPlnkr.js"></script>
+    <script src="javascripts/angular.js"></script>
+    <script src="javascripts/ngd.js"></script>
+    <script src="javascripts/angularjs-plunker.debug.js"></script>
 
     <script src="//rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js"></script>
     <script src="javascripts/app.js"></script>
@@ -210,14 +211,14 @@
 <h2>Simple Marker
   <a href="//developers.google.com/maps/documentation/javascript/examples/marker-simple">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map54')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map54')">
     <map init-event="init-map54" style="background:url(images/marker-simple.png) center" center="-25.363882,131.044922" zoom="4">
       <marker position="-25.363882,131.044922" title="Hello World!"></marker>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
           <script src="javascripts/marker-remove.js"></script>
 <!-- ======================================================= -->
@@ -229,9 +230,9 @@
   <a href="//developers.google.com/maps/documentation/javascript/examples/marker-remove">Google Source</a>
 </h2>
 Click on map to add a marker. Click button to show, hide, or remove markers<br/>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/marker-remove.js"></div>
-  <style ngd-plnkr-code="css">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/marker-remove.js"></plunker-code>
+  <style plunker-code type="css">
     div[ng-controller='MarkerRemoveCtrl'] {
       position: relative;
     }
@@ -246,7 +247,7 @@ Click on map to add a marker. Click button to show, hide, or remove markers<br/>
       border: 1px solid #999;
     }
   </style>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map53')">
+  <plunker-code type="html" ng-click="$broadcast('init-map53')">
     <div ng-controller="MarkerRemoveCtrl">
       <div id="panel">
         <input ng-click="hideMarkers()" type=button value="Hide Markers">
@@ -257,9 +258,9 @@ Click on map to add a marker. Click button to show, hide, or remove markers<br/>
         <marker ng-repeat="pos in positions" position="{{pos.lat}}, {{pos.lng}}"></marker>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
 <!-- ===================================================== -->
 <!--           <div ng-include="'icon-simple.html'"></div> -->
@@ -268,14 +269,14 @@ Click on map to add a marker. Click button to show, hide, or remove markers<br/>
 <h2>Simple Icon
   <a href="//developers.google.com/maps/documentation/javascript/examples/icon-somple">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map15')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map15')">
     <map init-event="init-map15" style="background:url(images/icon-simple.png) center" zoom="4" center="-33, 151">
       <marker position="-33.890542, 151.274856" icon="//developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"></marker>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
           <script src="javascripts/icon-complex.js"></script>
 <!-- ====================================================== -->
@@ -285,9 +286,9 @@ Click on map to add a marker. Click button to show, hide, or remove markers<br/>
 <h2>Complex Icon
   <a href="//developers.google.com/maps/documentation/javascript/examples/icon-complex">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/icon-complex.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map14')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/icon-complex.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map14')">
     <div ng-controller="IconComplexCtrl">
       <map init-event="init-map14" style="background:url(images/icon-complex.png) center" zoom="10" center="-33.9, 151.2">
         <marker ng-repeat="beach in beaches"
@@ -298,9 +299,9 @@ Click on map to add a marker. Click button to show, hide, or remove markers<br/>
           z-index="{{beach[3]}}"></marker>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
           <script src="javascripts/marker-animations.js"></script>
 <!-- =========================================================== -->
@@ -313,9 +314,9 @@ Click on map to add a marker. Click button to show, hide, or remove markers<br/>
 The following example creates a marker in Stockholm, Sweden
 using a DROP animation. Clicking on the marker will toggle
 the animation between a BOUNCE animation and no animation.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/marker-animations.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map52')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/marker-animations.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map52')">
     <div ng-controller="MarkerAnimationsCtrl">
       <map init-event="init-map52" style="background:url(images/marker-animations.png) center" center="59.32522, 18.07002" zoom="13">
         <marker position="59.327383, 18.06747" 
@@ -324,9 +325,9 @@ the animation between a BOUNCE animation and no animation.
           draggable="true"></marker>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
           <script src="javascripts/marker-animations-iteration.js"></script>
 <!-- ===================================================================== -->
@@ -340,9 +341,9 @@ If you're adding a number of markers, you may want to
 drop them on the map consecutively rather than all at once.
 This example shows how to use setTimeout() to space
 your markers' animation.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/marker-animations-iteration.js"></div>
-  <style ngd-plnkr-code="css">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/marker-animations-iteration.js"></plunker-code>
+  <style plunker-code type="css">
     div[ng-controller] {
       position: relative;
     }
@@ -357,7 +358,7 @@ your markers' animation.
       border: 1px solid #999;
     }
   </style>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map51')">
+  <plunker-code type="html" ng-click="$broadcast('init-map51')">
     <div ng-controller="MarkerAnimationsIterationCtrl">
       <div id="panel">
         <button id="drop" ng-click="addMarker()">Drop Markers</button>
@@ -365,9 +366,9 @@ your markers' animation.
       <map init-event="init-map51" style="background:url(images/marker-animations-iteration.png) center" center="52.520816, 13.410186" zoom="12">
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
 <!-- =========================================================== -->
 <!--           <div ng-include="'infowindow-simple.html'"></div> -->
@@ -378,8 +379,8 @@ your markers' animation.
 </h2>
 This example displays a marker at the center of Australia.
 When the user clicks the marker, an info window opens.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map17')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map17')">
     <map init-event="init-map17" style="background:url(images/infowindow-simple.png) center" center="-25.363882,131.044922" zoom="4">
       <marker id="foo" position="-25.363882,131.044922"
         on-click="showInfoWindow(event, 'bar')">
@@ -406,9 +407,9 @@ When the user clicks the marker, an info window opens.
         </div>
       </info-window>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
 <!-- =============================================================== -->
 <!--           <div ng-include="'infowindow-simple-max.html'"></div> -->
@@ -417,8 +418,8 @@ When the user clicks the marker, an info window opens.
 <h2>Info Windows with max. width
   <a href="//developers.google.com/maps/documentation/javascript/examples/infowindow-simple-max">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map16')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map16')">
     <map init-event="init-map16" style="background:url(images/infowindow-simple-max.png) center" center="-25.363882,131.044922" zoom="4">
       <marker id="foo" position="-25.363882,131.044922"
         on-click="showInfoWindow(event, 'bar')">
@@ -445,9 +446,9 @@ When the user clicks the marker, an info window opens.
         </div>
       </info-window>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
 <!-- ========================================================= -->
 <!--           <div ng-include="'polyline-simple.html'"></div> -->
@@ -456,8 +457,8 @@ When the user clicks the marker, an info window opens.
 <h2> Simple Polyline
   <a href="//developers.google.com/maps/documentation/javascript/examples/polyline-simple">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map71')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map71')">
    <map init-event="init-map71" style="background:url(images/polyline-simple.png) center" zoom="3" center="0, -180" map-type-id="TERRAIN">
      <shape name="polyline" 
        path="[
@@ -472,9 +473,9 @@ When the user clicks the marker, an info window opens.
        stroke-weight="2">
      </shape>
    </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
           <script src="javascripts/polyline-remove.js"></script> 
 <!-- ========================================================= -->
@@ -484,8 +485,8 @@ When the user clicks the marker, an info window opens.
 <h2> Remove a polyline
   <a href="//developers.google.com/maps/documentation/javascript/examples/polyline-remove">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <style ngd-plnkr-code="css">
+<plunker module-name="myapp">
+  <style plunker-code type="css">
     div[ng-controller=PolylineRemoveCtrl] {
       position: relative;
     }
@@ -500,8 +501,8 @@ When the user clicks the marker, an info window opens.
       border: 1px solid #999;
     }
   </style>
-  <div ngd-plnkr-code="js" src="javascripts/polyline-remove.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map70')">
+  <plunker-code type="js" src="javascripts/polyline-remove.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map70')">
     <div ng-controller="PolylineRemoveCtrl">
       <div id="panel">
         <input ng-click="removeLine()" type=button value="Remove Line">
@@ -522,9 +523,9 @@ When the user clicks the marker, an info window opens.
         </shape>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
           <script src="javascripts/polyline-complex.js"></script> 
 <!-- ========================================================== -->
@@ -534,17 +535,17 @@ When the user clicks the marker, an info window opens.
 <h2>
   <a href="//developers.google.com/maps/documentation/javascript/examples/polyline-complex">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/polyline-complex.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map69')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/polyline-complex.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map69')">
     <div ng-controller="PolylineComplexCtrl">
       <map init-event="init-map69" style="background:url(images/polyline-complex.png) center" zoom="7" center="41.879535, -87.624333"
         on-click="addMarkerAndPath()">
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
 <!-- ======================================================== -->
 <!--           <div ng-include="'polygon-simple.html'"></div> -->
@@ -553,8 +554,8 @@ When the user clicks the marker, an info window opens.
 <h2> Simple Polygon
   <a href="//developers.google.com/maps/documentation/javascript/examples/polygon-simple">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map68')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map68')">
     <map init-event="init-map68" style="background:url(images/polygon-simple.png) center" zoom="5" 
       center="24.886436490787712, -70.2685546875" 
       map-type-id="TERRAIN">
@@ -572,9 +573,9 @@ When the user clicks the marker, an info window opens.
        fill-opacity="0.35">
      </shape>
    </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
           <script src="javascripts/polygon-arrays.js"></script> 
 <!-- ======================================================== -->
@@ -584,9 +585,9 @@ When the user clicks the marker, an info window opens.
 <h2> Polygon Arrays
   <a href="//developers.google.com/maps/documentation/javascript/examples/polygon-arrays">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/polygon-arrays.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map64')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/polygon-arrays.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map64')">
     <div ng-controller="PolygonArraysCtrl">
       <map init-event="init-map64" style="background:url(images/polygon-arrays.png) center" zoom="5" 
         center="24.886436490787712, -70.2685546875" 
@@ -606,9 +607,9 @@ When the user clicks the marker, an info window opens.
        </shape>
      </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
 <!-- =========================================================== -->
 <!--           <div ng-include="'polygon-autoclose.html'"></div> -->
@@ -617,8 +618,8 @@ When the user clicks the marker, an info window opens.
 <h2>Polygon Auto-completion
   <a href="//developers.google.com/maps/documentation/javascript/examples/polygon-autoclose">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map65')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map65')">
     <map init-event="init-map65" style="background:url(images/polygon-autoclose.png) center" zoom="5" 
       center="24.886436490787712, -70.2685546875" 
       map-type-id="TERRAIN">
@@ -635,9 +636,9 @@ When the user clicks the marker, an info window opens.
        fill-opacity="0.35">
      </shape>
    </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
           <script src="javascripts/circle-simple.js"></script>
 <!-- ======================================================= -->
@@ -648,9 +649,9 @@ When the user clicks the marker, an info window opens.
   <a href="//developers.google.com/maps/documentation/javascript/examples/circle-simple">Google Source</a>
 </h2>
 This example creates circles on the map, representing populations in North America.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/circle-simple.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map3')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/circle-simple.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map3')">
     <div ng-controller="CircleSimpleCtrl">
       <map init-event="init-map3" style="background:url(images/circle-simple.png) center" center="37.09024, -95.712891" zoom="4" mayTypeId="TERRAIN">
         <shape name="circle" ng-repeat="city in cities"
@@ -664,9 +665,9 @@ This example creates circles on the map, representing populations in North Ameri
         </shape>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
 <!-- ========================================================== -->
 <!--           <div ng-include="'rectangle-simple.html'"></div> -->
@@ -675,8 +676,8 @@ This example creates circles on the map, representing populations in North Ameri
 <h2>
   <a href="//developers.google.com/maps/documentation/javascript/examples/rectangle-simple">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map73')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map73')">
     <map init-event="init-map73" style="background:url(images/rectangle-simple.png) center" zoom="11" 
       center="33.678176, -116.242568" 
       map-type-id="TERRAIN">
@@ -692,9 +693,9 @@ This example creates circles on the map, representing populations in North Ameri
        ]">
      </shape>
    </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
           <script src="javascripts/rectangle-zoom.js"></script>
 <!-- ======================================================== -->
@@ -705,9 +706,9 @@ This example creates circles on the map, representing populations in North Ameri
   <a href="//developers.google.com/maps/documentation/javascript/examples/CHANGE">Google Source</a>
 </h2>
 This example creates a rectangle based on the viewport on any 'zoom-changed' event.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/rectangle-zoom.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map74')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/rectangle-zoom.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map74')">
     <div ng-controller="RectangleZoomCtrl">
       <map init-event="init-map74" style="background:url(images/rectangle-zoom.png) center" zoom="11" 
         center="33.6803003, -116.173894" 
@@ -722,9 +723,9 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
         </shape>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
 <!-- ============================================================== -->
 <!--           <div ng-include="'user-editable-shapes.html'"></div> -->
@@ -733,8 +734,8 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
 <h2>
   <a href="//developers.google.com/maps/documentation/javascript/examples/user-editable-shapes">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map75')">
+<plunker module-name="ngMap">
+  <plunker-code="html" ng-click="$broadcast('init-map75')">
     <map init-event="init-map75" style="background:url(images/user-editable-shapes.png) center" zoom="9" 
       center="44.5452, -78.5389">
      <shape name="rectangle" 
@@ -742,9 +743,9 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
        bounds="[ [44.490, -78.649], [44.599, -78.443] ]">
      </shape>
    </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
 <!-- =========================================================== -->
 <!--           <div ng-include="'polygon-draggable.html'"></div> -->
@@ -753,8 +754,8 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
 <h2> Draggable Polygons
   <a href="//developers.google.com/maps/documentation/javascript/examples/polyggon-dragbable">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map67')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map67')">
     <map init-event="init-map67" style="background:url(images/polygon-draggable.png) center" zoom="1" center="24.886, -70.268" map-type-id="TERRAIN">
      <shape name="polygon" 
        paths="[[25.774, -80.190], [18.466, -66.118], [32.321, -64.757]]"
@@ -777,9 +778,9 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
        fill-opacity="0.35">
      </shape>
    </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
           <script src="javascripts/rectangle-event.js"></script>
 <!-- ========================================================= -->
@@ -792,9 +793,9 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
    This example adds a user-editable rectangle to the map.
    When the user changes the bounds of the rectangle,
    an info window pops up displaying the new bounds.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/rectangle-event.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map72')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/rectangle-event.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map72')">
     <div ng-controller="RectangleEventCtrl">
       <map init-event="init-map72" style="background:url(images/rectangle-event.png) center" zoom="9" center="44.5452, -78.5389">
         <shape name="rectangle" 
@@ -815,9 +816,9 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
             New north-east corner: {{ne.lat()}}, {{ne.lng()}}<br/>
             New south-west corner: {{sw.lat()}}, {{sw.lng()}}
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
 <!-- ============================================================== -->
 <!--           <div ng-include="'groundoverlay-simple.html'"></div> -->
@@ -826,17 +827,17 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
 <h2>Groundoverlay Simple
   <a href="//developers.google.com/maps/documentation/javascript/examples/groundoverlay-simple">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map13')">
+<plunker module-name="myapp">
+  <plunker-code type="html" ng-click="$broadcast('init-map13')">
    <map init-event="init-map13" style="background:url(images/groundoverlay-simple.png) center" zoom="13" center="40.740, -74.18">
      <shape name="image" 
        url="//www.lib.utexas.edu/maps/historical/newark_nj_1922.jpg"
        bounds="[[40.712216, -74.22655], [40.773941, -74.12544]]">
      </shape>
    </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
           <script src="javascripts/overlay-remove.js"></script>
 <!-- ======================================================== -->
@@ -846,9 +847,9 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
 <h2> Remove Overlay
   <a href="//developers.google.com/maps/documentation/javascript/examples/overlay-remove">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/overlay-remove.js"></div>
-  <style ngd-plnkr-code="css">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/overlay-remove.js"></plunker-code>
+  <style plunker-code type="css">
     div[ng-controller=OverlayRemoveCtrl] {
       position: relative;
     }
@@ -863,7 +864,7 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
       border: 1px solid #999;
     }
   </style>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map58')">
+  <plunker-code type="html" ng-click="$broadcast('init-map58')">
     <div ng-controller="OverlayRemoveCtrl">
       <div id="panel">
         <input ng-click="remove()" type=button value="Remove overlay">
@@ -876,9 +877,9 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
        </shape>
      </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
 
 
  
@@ -890,30 +891,30 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
 <h2> Simple Overlay
   <a href="//developers.google.com/maps/documentation/javascript/examples/overlay-simple">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/overlay-simple.js"></div>
-  <div ngd-plnkr-lib="//ngmap.github.io/javascripts/USGSOverlay.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map59')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/overlay-simple.js"></plunker-code>
+  <plunker-lib src="//ngmap.github.io/javascripts/USGSOverlay.js"></plunker-lib>
+  <plunker-code type="html" ng-click="$broadcast('init-map59')">
     <div ng-controller="OverlaySimpleCtrl">
       <map init-event="init-map59" style="background:url(images/overlay-simple.png) center" zoom="11" center="62.323907, -150.109291" map-type-id="SATELLITE"></map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
           <script src="javascripts/USGSOverlay.js"></script>
           <script src="javascripts/overlay-hideshow.js"></script>
 <!-- ========================================================== -->
 <!--           <div ng-include="'overlay-hideshow.html'"></div> -->
 <!-- ========================================================== -->
-<ahtml id="overlay-hideshow" ngd-viewport-el></a> 
+<a id="overlay-hideshow" ngd-viewport-el></a> 
 <h2> Overlay show/hide
   <a href="//developers.google.com/maps/documentation/javascript/examples/overlay-hideshow">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/overlay-hideshow.js"></div>
-  <div ngd-plnkr-lib="//ngmap.github.io/javascripts/USGSOverlay.js"></div>
-  <style ngd-plnkr-code="css">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/overlay-hideshow.js"></plunker-code>
+  <plunker-lib src="//ngmap.github.io/javascripts/USGSOverlay.js"></plunker-lib>
+  <style plunker-code type="css">
     div[ng-controller=OverlayHideshowCtrl] {
       position: relative;
     }
@@ -928,18 +929,18 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
       border: 1px solid #999;
     }
   </style>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map57')">
+  <plunker-code type="html" ng-click="$broadcast('init-map57')">
     <div ng-controller="OverlayHideshowCtrl">
       <div id="panel">
         <input ng-click="toggleVisibility()" type=button value="Toggle Visibility">
         <input ng-click="toggleDOMAttachment()" type=button value="Toggle DOM Attachment">
-      </div>
+      </plunker-code>
       <map init-event="init-map57" style="background:url(images/overlay-hideshow.png) center" zoom="11" center="62.323907, -150.109291" map-type-id="SATELLITE">
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
 <!-- ================================================================== -->
 <!--           <div ng-include="'marker-symbol-predefined.html'"></div> -->
@@ -952,16 +953,16 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
   This example uses a symbol to add a vector-based icon to a marker.
   The symbol uses one of the predefined vector paths ('CIRCLE') supplied by the
   Google Maps JavaScript API.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map56')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map56')">
     <map init-event="init-map56" style="background:url(images/marker-symbol-predefined.png) center" center="-25.363882,131.044922" zoom="4">
       <marker position="-25.363882,131.044922" 
         icon="{path:'CIRCLE', scale: 10}"
         dragglele="true"></marker>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
 <!-- ============================================================== -->
 <!--           <div ng-include="'marker-symbol-custom.html'"></div> -->
@@ -973,8 +974,8 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
    This example uses SVG path notation to add a vector-based symbol
    as the icon for a marker. The resulting icon is a star-shaped symbol
    with a pale yellow fill and a thick yellow border.
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map55')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map55')">
     <map init-event="init-map55" style="background:url(images/marker-symbol-custom.png) center" center="-25.363882,131.044922" zoom="4">
       <marker position="-25.363882,131.044922" 
       icon="{
@@ -987,9 +988,9 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
       }"
       dragglele="true"></marker>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
           <script src="javascripts/overlay-symbol-animate.js"></script>
 <!-- ================================================================ -->
@@ -999,9 +1000,9 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
 <h2> Animating Symbols
   <a href="//developers.google.com/maps/documentation/javascript/examples/overlay-symbol-animate">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/overlay-symbol-animate.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map60')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/overlay-symbol-animate.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map60')">
     <div ng-controller="OverlaySymbolAnimateCtrl">
       <map init-event="init-map60" style="background:url(images/overlay-symbol-animate.png) center" zoom="5" center="20.291, 153.027" map-type-id="TERRAIN">
         <shape name="polyline" id="foo"
@@ -1017,9 +1018,9 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
         </shape>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
 <!-- ============================================================== -->
 <!--           <div ng-include="'overlay-symbol-arrow.html'"></div> -->
@@ -1028,8 +1029,8 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
 <h2> Arrows (Symbols)
   <a href="//developers.google.com/maps/documentation/javascript/examples/overlay-symbol-arrow">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map61')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map61')">
     <map init-event="init-map61" style="background:url(images/overlay-symbol-arrow.png) center" zoom="6" center="20.291, 153.027" map-type-id="TERRAIN">
       <shape name="polyline" id="foo"
         path="[[22.291, 153.027], [18.291, 153.027]]"
@@ -1041,9 +1042,9 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
         }]">
       </shape>
    </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
 <!-- =============================================================== -->
 <!--           <div ng-include="'overlay-symbol-custom.html'"></div> -->
@@ -1052,8 +1053,8 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
 <h2> Custom Symbols 
   <a href="//developers.google.com/maps/documentation/javascript/examples/overlay-symbol-custom">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map62')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map62')">
     <map init-event="init-map62" style="background:url(images/overlay-symbol-custom.png) center" zoom="6" center="20.291, 153.027" map-type-id="TERRAIN">
       <shape name="polyline" id="foo"
         path="[[22.291, 153.027], [18.291, 153.027]]"
@@ -1086,9 +1087,9 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
         ]">
       </shape>
    </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
 <!-- =============================================================== -->
 <!--           <div ng-include="'overlay-symbol-dashed.html'"></div> -->
@@ -1097,8 +1098,8 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
 <h2> Dashed Lines (Symbols)
   <a href="//developers.google.com/maps/documentation/javascript/examples/overlay-symbol-dashed">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map63')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map63')">
      <map init-event="init-map63" style="background:url(images/overlay-symbol-dashed.png) center" zoom="6" center="20.291, 153.027" map-type-id="TERRAIN">
         <shape name="polyline" id="foo"
           path="[[22.291, 153.027], [18.291, 153.027]]"
@@ -1114,9 +1115,9 @@ This example creates a rectangle based on the viewport on any 'zoom-changed' eve
           }]">
         </shape>
      </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
  
           
 <!-- ========================================================= -->

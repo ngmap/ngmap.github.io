@@ -2,8 +2,8 @@
 <h2>Info Windows with max. width
   <a href="//developers.google.com/maps/documentation/javascript/examples/infowindow-simple-max">Google Source</a>
 </h2>
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map16')">
+<plunker module-name="ngMap">
+  <plunker-code type="html" ng-click="$broadcast('init-map16')">
     <map init-event="init-map16" style="background:url(images/infowindow-simple-max.png) center" center="-25.363882,131.044922" zoom="4">
       <marker id="foo" position="-25.363882,131.044922"
         on-click="showInfoWindow(event, 'bar')">
@@ -30,6 +30,6 @@
         </div>
       </info-window>
     </map>
-  </div>
-  <div ngd-plnkr-show module-name="ngMap"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>

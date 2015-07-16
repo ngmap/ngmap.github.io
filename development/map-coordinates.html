@@ -3,9 +3,9 @@
   <a href="#">Google Source</a>
 </h2>
 Showing static coordinates of Chicago
-<div ngd-plnkr-scope>
-  <div ngd-plnkr-code="js" src="javascripts/map-coordinates.js"></div>
-  <div ngd-plnkr-code="html" ng-click="$broadcast('init-map39')">
+<plunker module-name="myapp">
+  <plunker-code type="js" src="javascripts/map-coordinates.js"></plunker-code>
+  <plunker-code type="html" ng-click="$broadcast('init-map39')">
     <div ng-controller="MapCoordinatesCtrl">
       <map init-event="init-map39" style="background:url(images/map-coordinates.png) center" 
         center="41.850033,-87.6500523" zoom="3">
@@ -20,6 +20,6 @@ Showing static coordinates of Chicago
         </info-window>
       </map>
     </div>
-  </div>
-  <div ngd-plnkr-show module-name="myapp"></div>
-</div>
+  </plunker-code>
+  <plunker-show></plunker-show>
+</plunker>
