@@ -4,20 +4,21 @@
 (function() {
   'use strict';
  
-  var baseUrl= 'http://rawgit.com/allenhwkim/angularjs-google-maps/angualr2-prepared/testapp';
+  var baseUrl= 'http://rawgit.com/allenhwkim/angularjs-google-maps/master';
+  
   var replaces = {
     '<script src="script-tags-for-development.js"></script>' :
        [
          '<script src="http://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places"></script>',
          '<script src="http://code.angularjs.org/1.3.15/angular.js"></script>',
-         '<script src="http://rawgit.com/allenhwkim/angularjs-google-maps/angualr2-prepared/build/scripts/ng-map.js"></script>',
+         '<script src="' + baseUrl + '/build/scripts/ng-map.js"></script>',
        ].join("\n"),
     '<script src="taxi-data.js"></script>':
-      '<script src="'+baseUrl+'/taxi-data.js"></script>',
+      '<script src="'+baseUrl+'/testapp/taxi-data.js"></script>',
     '<script src="scripts/markerclusterer.js"></script>':
-      '<script src="'+baseUrl+'/scripts/markerclusterer.js"></script>',
+      '<script src="'+baseUrl+'/testapp/scripts/markerclusterer.js"></script>',
     '<script src="USGSOverlay.js"></script>':
-      '<script src="'+baseUrl+'/USGSOverlay.js"></script>'
+      '<script src="'+baseUrl+'/testapp/USGSOverlay.js"></script>'
   };
 
   var controller = function($http, $timeout, $location, $element, jvPlunker, jvArrayFilter) {
@@ -26,13 +27,13 @@
     vm.viewIframe = function(url) {
       vm.viewSource = false;
       document.querySelector('iframe').
-        setAttribute('src',  baseUrl + "/" + url);
+        setAttribute('src',  baseUrl + "/testapp/" + url);
     };
 
     vm.viewIframeSource = function() {
       console.log('src', document.querySelector('iframe').getAttribute('src'));
       var url = document.querySelector('iframe').src;
-      $http.get(baseUrl + '/' + url).then(function(resp) {
+      $http.get(baseUrl + '/testapp/' + url).then(function(resp) {
         vm.iframeSource = resp.data;
         vm.viewSource = true;
         $timeout(function() {
@@ -43,7 +44,7 @@
 
     vm.viewInPlunker = function() {
       var url = document.querySelector('iframe').src;
-      $http.get(baseUrl + '/' + url).then(function(resp) {
+      $http.get(baseUrl + '/testapp/' + url).then(function(resp) {
         var plunkerHTML = resp.data;
         for(var key in replaces) {
           var re = new RegExp(key.replace(/&lt;/g, '<'), 'g');
@@ -54,7 +55,7 @@
       })
     };
 
-    $http.get(baseUrl + '/all-examples.json').then(function(resp) {
+    $http.get(baseUrl + '/testapp/all-examples.json').then(function(resp) {
       vm.allExamples = jvArrayFilter(resp.data);
     });
 
@@ -62,12 +63,12 @@
     if ($location.url()) {
       $timeout(function() {
         document.querySelector('iframe').
-          setAttribute('src', baseUrl + "/" + $location.url().slice(1));
+          setAttribute('src', baseUrl + "/testapp/" + $location.url().slice(1));
       });
     } else {
       $timeout(function() {
         document.querySelector('iframe').
-          setAttribute('src', baseUrl + "/map-simple.html");
+          setAttribute('src', baseUrl + "/testapp/map-simple.html");
       });
     }
   };
