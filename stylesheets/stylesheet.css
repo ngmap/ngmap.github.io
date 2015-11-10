@@ -81,6 +81,7 @@ header {
 }
 
 header h1 {
+  display:inline-block;
   letter-spacing: -1px;
   font-size: 72px;
   color: #fff;
@@ -89,14 +90,17 @@ header h1 {
 }
 
 header h2 {
+  display:inline-block;
   font-size: 26px;
   color: #9ddcff;
   line-height: 1.3;
   letter-spacing: 0;
 }
 
-header .inner {
-  max-width: 1200px;
+header a.download {
+  color:#fff;
+  float:right;
+  margin-right:20px;
 }
 
 /** map related css **/
@@ -106,6 +110,7 @@ map {
 }
 
 #content-wrapper {
+  padding-left: 1em;
   width: 70%;
   height: 100%;
   float: left;
@@ -113,6 +118,10 @@ map {
 
 #main-content { 
   height: 90%;
+}
+
+#main-content button {
+  font-size: 13px;
 }
 
 #main-content map img {
@@ -143,6 +152,10 @@ aside#sidebar ul {
 }
 aside#sidebar ul ul {
   margin-bottom: 0px;
+}
+
+aside#sidebar #search-box [
+  padding:1em;
 }
 
 #downloads {
