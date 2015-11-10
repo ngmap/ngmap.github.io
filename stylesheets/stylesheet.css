@@ -110,7 +110,7 @@ map {
 }
 
 #content-wrapper {
-  padding-left: 1em;
+  padding: 1em;
   width: 70%;
   height: 100%;
   float: left;
