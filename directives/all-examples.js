@@ -1,11 +1,12 @@
 /**
  * all-examples section
  */
-/*global document, prettyPrint */
+/*global window, document, prettyPrint */
 (function() {
   'use strict';
 
-  var baseUrl= 'http://rawgit.com/allenhwkim/angularjs-google-maps/master';
+  //var baseUrl= 'http://rawgit.com/allenhwkim/angularjs-google-maps/master';
+  var baseUrl= 'http://localhost:9000';
 
   var replaces = {
     '<script src="script-tags-for-development.js"></script>' :
@@ -35,6 +36,7 @@
     vm.viewIframeSource = function() {
       console.log('src', document.querySelector('iframe').getAttribute('src'));
       var url = document.querySelector('iframe').src;
+    console.log('url', url);
       $http.get(baseUrl + '/testapp/' + url).then(function(resp) {
         var html = resp.data.replace(/</g, '&lt;');
         document.querySelector('pre.prettyprint').innerHTML = html;
@@ -64,15 +66,12 @@
     });
 
     //initial iframe setting
-    if ($location.url()) {
-      $timeout(function() {
-        vm.viewIframe($location.url().slice(1));
-      });
-    } else {
-      $timeout(function() {
-        vm.viewIframe("map-simple.html");
-      });
-    }
+    $timeout(function() {
+      var iframeUrl = $location.url() ?
+        $location.url().slice(1) : "map-simple.html";
+      vm.viewIframe(iframeUrl);
+    });
+
   };
 
 

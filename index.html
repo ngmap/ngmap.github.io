@@ -16,12 +16,12 @@
 
     <script>angular.module('jvDirectives',[]);</script> 
     <script src="directives/jv-fixed-under.js"></script>
+    <script src="directives/jv-iframe-auto-height.js"></script>
     <script src="filters/jv-array.js"></script>
     <script src="services/jv-plunker.js"></script>
 
     <script>angular.module('myapp',['jvDirectives']);</script>
     <script src="directives/all-examples.js"></script>
-
   </head>
 
   <body>
@@ -73,7 +73,7 @@
     <section id="main-content">
 
       <all-examples>
-        <iframe name="iframe" frameborder="0">
+        <iframe name="iframe" frameborder="0" jv-iframe-auto-height>
         </iframe>
         <div class="buttons">
           <button ng-click="vm.viewInPlunker()">Run In Plunker</button>
