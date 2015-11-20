@@ -7,7 +7,7 @@
     $window.addEventListener("message", function(event) {
       if (event.data.height) {
         console.log("message received", event.data);
-        $element[0].style.height = event.data.height +'px';
+        $element[0].style.height = (event.data.height + 16) + 'px';
       }
     });
   };
