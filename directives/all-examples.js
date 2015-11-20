@@ -1,12 +1,11 @@
 /**
  * all-examples section
  */
-/*global window, document, prettyPrint */
+/*global document, prettyPrint */
 (function() {
   'use strict';
 
-  //var baseUrl= 'http://rawgit.com/allenhwkim/angularjs-google-maps/master';
-  var baseUrl= 'http://localhost:9000';
+  var baseUrl= 'http://rawgit.com/allenhwkim/angularjs-google-maps/master';
 
   var replaces = {
     '<script src="script-tags-for-development.js"></script>' :
@@ -36,7 +35,6 @@
     vm.viewIframeSource = function() {
       console.log('src', document.querySelector('iframe').getAttribute('src'));
       var url = document.querySelector('iframe').src;
-    console.log('url', url);
       $http.get(baseUrl + '/testapp/' + url).then(function(resp) {
         var html = resp.data.replace(/</g, '&lt;');
         document.querySelector('pre.prettyprint').innerHTML = html;
