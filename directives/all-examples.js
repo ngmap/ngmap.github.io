@@ -4,13 +4,13 @@
 (function() {
   'use strict';
  
-  var baseUrl= 'http://rawgit.com/allenhwkim/angularjs-google-maps/master';
+  var baseUrl= 'https://rawgit.com/allenhwkim/angularjs-google-maps/master';
   
   var replaces = {
     '<script src="script-tags-for-development.js"></script>' :
        [
-         '<script src="http://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places"></script>',
-         '<script src="http://code.angularjs.org/1.3.15/angular.js"></script>',
+         '<script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places"></script>',
+         '<script src="https://code.angularjs.org/1.3.15/angular.js"></script>',
          '<script src="' + baseUrl + '/build/scripts/ng-map.js"></script>',
        ].join("\n"),
     '<script src="taxi-data.js"></script>':
