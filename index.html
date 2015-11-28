@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    
+
     <script src="lib/angular.min.js"></script>
-    <link href="lib/prettify-tomorrow-night.css" type="text/css" rel="stylesheet" />
-    <script src="lib/prettify.js"></script>
+    <link href="lib/prettify-tomorrow-night.css" type="text/css" rel="stylesheet" /> <script src="lib/prettify.js"></script>
 
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -17,12 +16,12 @@
 
     <script>angular.module('jvDirectives',[]);</script> 
     <script src="directives/jv-fixed-under.js"></script>
+    <script src="directives/jv-iframe-auto-height.js"></script>
     <script src="filters/jv-array.js"></script>
     <script src="services/jv-plunker.js"></script>
 
     <script>angular.module('myapp',['jvDirectives']);</script>
     <script src="directives/all-examples.js"></script>
-
   </head>
 
   <body>
@@ -71,37 +70,33 @@
       </p>
     </aside>
 
-    <div id="content-wrapper">
-      <section id="main-content">
+    <section id="main-content">
 
-        <all-examples>
-          <div class="buttons">
-            <button ng-click="vm.viewSource=false">Run</button>
-            <button ng-click="vm.viewIframeSource()">Source</button>
-            <button ng-click="vm.viewInPlunker()">Plunker</button>
-          </div>
+      <all-examples>
+        <iframe name="iframe" frameborder="0" jv-iframe-auto-height>
+        </iframe>
+        <div class="buttons">
+          <button ng-click="vm.viewInPlunker()">Run In Plunker</button>
+        </div>
 
-          <iframe ng-hide="vm.viewSource" name="iframe" frameborder="0">
-          </iframe>
+        <div class="source">
+          <pre class="prettyprint lang-html"></pre>
+        </div>
+      </all-examples>
 
-          <pre ng-show="vm.viewSource"
-            class="source prettyprint lang-html" >{{vm.iframeSource}}</pre>
-        </all-examples>
+      <!-- disqus section -->
+      <div id="disqus_thread"></div>
+      <script>
+      //var disqus_config = function () { this.page.identifier = 'index'; };
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//ngmap.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      </script>
 
-        <!-- disqus section -->
-        <div id="disqus_thread"></div>
-        <script>
-        //var disqus_config = function () { this.page.identifier = 'index'; };
-        (function() { // DON'T EDIT BELOW THIS LINE
-          var d = document, s = d.createElement('script');
-          s.src = '//ngmap.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-        </script>
-
-      </section>
-    </div>
+    </section>
   </body>
 </html>
 

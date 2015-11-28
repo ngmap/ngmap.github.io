@@ -1,6 +1,7 @@
 /**
  * all-examples section
  */
+/*global document, prettyPrint */
 (function() {
   'use strict';
  
@@ -28,18 +29,21 @@
       vm.viewSource = false;
       document.querySelector('iframe').
         setAttribute('src',  baseUrl + "/testapp/" + url);
+      vm.viewIframeSource();
     };
 
     vm.viewIframeSource = function() {
       console.log('src', document.querySelector('iframe').getAttribute('src'));
       var url = document.querySelector('iframe').src;
       $http.get(baseUrl + '/testapp/' + url).then(function(resp) {
-        vm.iframeSource = resp.data;
-        vm.viewSource = true;
+        var html = resp.data.replace(/</g, '&lt;');
+        document.querySelector('pre.prettyprint').innerHTML = html;
         $timeout(function() {
+          var el = document.querySelector('pre.prettyprint');
+          el.className = el.className.replace(' prettyprinted', '');
           prettyPrint();
         });
-      })
+      });
     };
 
     vm.viewInPlunker = function() {
@@ -52,7 +56,7 @@
             replaces[key].replace(/&lt;/g, '<'));
         }
         jvPlunker.submitToPlunker(plunkerHTML);
-      })
+      });
     };
 
     $http.get(baseUrl + '/testapp/all-examples.json').then(function(resp) {
@@ -60,17 +64,12 @@
     });
 
     //initial iframe setting
-    if ($location.url()) {
-      $timeout(function() {
-        document.querySelector('iframe').
-          setAttribute('src', baseUrl + "/testapp/" + $location.url().slice(1));
-      });
-    } else {
-      $timeout(function() {
-        document.querySelector('iframe').
-          setAttribute('src', baseUrl + "/testapp/map-simple.html");
-      });
-    }
+    $timeout(function() {
+      var iframeUrl = $location.url() ?
+        $location.url().slice(1) : "map-simple.html";
+      vm.viewIframe(iframeUrl);
+    });
+
   };
 
 
@@ -86,10 +85,9 @@
           element.append(clone);
         });
       }
-    }
+    };
   };
 
   angular.module('myapp').directive('allExamples', allExamples);
 
 })();
- 

@@ -109,37 +109,37 @@ map {
   display: block;
 }
 
-#content-wrapper {
+#main-content {
+  display: inline-block;
   padding: 1em;
   width: 70%;
   height: 100%;
-  float: left;
-}
-
-#main-content { 
-  height: 90%;
+  vertical-align: top;
 }
 
 #main-content button {
+  float: right;
+  margin: 0 8px;
   font-size: 13px;
 }
 
-#main-content map img {
+#main-content ng-map img {
   max-width: none;
 }
 
-#main-content iframe, 
+#main-content iframe,
 #main-content .source {
   width: 100%;
-  height:90%;
+  min-height: 300px;
   overflow:auto;
 }
 
+#main-content .source {
+  padding: 8px;
+}
+
 aside#sidebar {
-  width: 30%;
-  float: left;
-  padding: 20px;
-  line-height: 1.3;
+  display: inline-block;
 }
 
 aside#sidebar p.repo-owner,
