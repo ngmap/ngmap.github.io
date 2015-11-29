@@ -7,7 +7,7 @@
     var form = document.createElement('form');
     form.style.display = 'none';
     form.method = 'post';
-    form.action = 'https://plnkr.co/edit/?p=preview';
+    form.action = 'http://plnkr.co/edit/?p=preview';
     var postData = {
       description: "AngularJS Google Maps Directive",
       'private': true,
