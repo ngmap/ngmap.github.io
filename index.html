@@ -20,7 +20,11 @@
     <script src="filters/jv-array.js"></script>
     <script src="services/jv-plunker.js"></script>
 
-    <script>angular.module('myapp',['jvDirectives']);</script>
+    <script>
+      angular.module('myapp',['jvDirectives']).config(function($locationProvider) {
+        $locationProvider.hashPrefix('!')
+      });
+    </script>
     <script src="directives/all-examples.js"></script>
   </head>
 
