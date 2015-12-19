@@ -51,7 +51,7 @@
           <!-- ul jv-fixed-under under-element="#search-box" -->
           <ul>
             <li ng-repeat="example in vm.allExamples | filter:search | filter:'!all-examples' ">
-              <a href="#{{example.key}}" ng-click="vm.viewIframe(example.key)">
+              <a href="#!{{example.key}}" ng-click="vm.viewIframe(example.key)">
                 {{example.key}}
               </a>
             </li>
