@@ -42,7 +42,7 @@
     vm.viewIframe = function(url) {
       vm.viewSource = false;
       document.querySelector('iframe').
-        setAttribute('src',  baseUrl + "/testapp/" + url);
+        setAttribute('src',  baseUrl + "/testapp/" + url.replace(/^!/,''));
       vm.viewIframeSource();
       refreshDisqus(url);
     };
