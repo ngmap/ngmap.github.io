@@ -19,12 +19,7 @@
     <script src="directives/jv-iframe-auto-height.js"></script>
     <script src="filters/jv-array.js"></script>
     <script src="services/jv-plunker.js"></script>
-
-    <script>
-      angular.module('myapp',['jvDirectives']).config(function($locationProvider) {
-        $locationProvider.hashPrefix('!')
-      });
-    </script>
+    <script>angular.module('myapp',['jvDirectives']);</script>
     <script src="directives/all-examples.js"></script>
   </head>
 
@@ -88,18 +83,34 @@
         </div>
       </all-examples>
 
-      <!-- disqus section -->
-      <div id="disqus_thread"></div>
+      <!-- facebook stuff begin -->
       <script>
-      //var disqus_config = function () { this.page.identifier = 'index'; };
-      (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = '//ngmap.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-      </script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '1542317852752643',
+            xfbml      : true,
+            version    : 'v2.5'
+          });
+          FB.XFBML.parse(); // This is key for all this to work!
+        };
 
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+
+      </script>
+      <facebook-comments>
+        <div class="fb-like" data-share="true"
+           data-width="100%" data-show-faces="true"></div>
+        <div class="fb-comments" 
+          data-href="{{vm.absUrl}}"
+          data-width="100%" data-numposts="5"></div>
+      </facebook-comments>
+      <!-- facebook stuff end -->
     </section>
   </body>
 </html>

@@ -22,20 +22,6 @@
       '<script src="'+baseUrl+'/testapp/USGSOverlay.js"></script>'
   };
 
-  /**
-   * reset disqus contents by hashbang url
-   */
-  var refreshDisqus = function(identifier) {
-    window.DISQUS &&
-      DISQUS.reset({
-        reload: true,
-        config: function () {  
-          this.page.identifier = identifier;  
-          this.page.url = "" + window.location
-        }
-      });
-  };
-
   var controller = function($http, $timeout, $location, $element, jvPlunker, jvArrayFilter) {
     var vm = this;
 
@@ -44,7 +30,6 @@
       document.querySelector('iframe').
         setAttribute('src',  baseUrl + "/testapp/" + url.replace(/^!/,''));
       vm.viewIframeSource();
-      refreshDisqus(url);
     };
 
     vm.viewIframeSource = function() {
