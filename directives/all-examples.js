@@ -24,11 +24,13 @@
 
   var reloadFacebookComments = function() {
     setTimeout(function() {
-    var fbDiv = document.querySelector("#facebook-section");
-    var fbCommentsDiv = document.querySelector("#facebook-section .fb-comments");
-    fbDiv.removeChild(fbCommentsDiv);
-    fbDiv.appendChild(fbCommentsDiv);
-    FB.XFBML.parse();
+      var fbDiv = document.querySelector("#facebook-section");
+      var fbCommentsDiv = document.querySelector("#facebook-section .fb-comments");
+      fbDiv.removeChild(fbCommentsDiv);
+      setTimeout(function() {
+        fbDiv.appendChild(fbCommentsDiv);
+        FB.XFBML.parse();
+      }, 100);
     }, 100);
   }
 
