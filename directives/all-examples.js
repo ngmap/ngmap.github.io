@@ -22,14 +22,26 @@
       '<script src="'+baseUrl+'/testapp/USGSOverlay.js"></script>'
   };
 
+  var reloadFacebookComments = function() {
+    setTimeout(function() {
+    var fbDiv = document.querySelector("#facebook-section");
+    var fbCommentsDiv = document.querySelector("#facebook-section .fb-comments");
+    fbDiv.removeChild(fbCommentsDiv);
+    fbDiv.appendChild(fbCommentsDiv);
+    FB.XFBML.parse();
+    }, 100);
+  }
+
   var controller = function($http, $timeout, $location, $element, jvPlunker, jvArrayFilter) {
     var vm = this;
 
     vm.viewIframe = function(url) {
+      vm.absUrl = $location.absUrl();
       vm.viewSource = false;
       document.querySelector('iframe').
         setAttribute('src',  baseUrl + "/testapp/" + url.replace(/^!/,''));
       vm.viewIframeSource();
+      reloadFacebookComments();
     };
 
     vm.viewIframeSource = function() {
