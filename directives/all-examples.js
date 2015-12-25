@@ -22,18 +22,6 @@
       '<script src="'+baseUrl+'/testapp/USGSOverlay.js"></script>'
   };
 
-  var reloadFacebookComments = function() {
-    setTimeout(function() {
-      var fbDiv = document.querySelector("#facebook-section");
-      var fbCommentsDiv = document.querySelector("#facebook-section .fb-comments");
-      fbDiv.removeChild(fbCommentsDiv);
-      setTimeout(function() {
-        fbDiv.appendChild(fbCommentsDiv);
-        FB.XFBML.parse();
-      }, 100);
-    }, 100);
-  }
-
   var controller = function($http, $timeout, $location, $element, jvPlunker, jvArrayFilter) {
     var vm = this;
 
@@ -45,6 +33,20 @@
       vm.viewIframeSource();
       reloadFacebookComments();
     };
+
+    var reloadFacebookComments = function() {
+      setTimeout(function() {
+        var fbDiv = document.querySelector("#facebook-section");
+        var fbCommentsDiv = document.querySelector("#facebook-section .fb-comments");
+        fbCommentsDiv && fbDiv.removeChild(fbCommentsDiv);
+        fbCommentsDiv = document.createElement("div");
+        fbCommentsDiv.setAttribute('class', 'fb-comments');
+        fbCommentsDiv.setAttribute('data-href', vm.absUrl);
+        fbCommentsDiv.setAttribute('data-width', '100%');
+        fbDiv.appendChild(fbCommentsDiv);
+        FB.XFBML.parse();
+      }, 100);
+    }
 
     vm.viewIframeSource = function() {
       console.log('src', document.querySelector('iframe').getAttribute('src'));
