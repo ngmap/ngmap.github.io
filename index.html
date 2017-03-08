@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-
     <script src="lib/angular.min.js"></script>
     <link href="lib/prettify-tomorrow-night.css" type="text/css" rel="stylesheet" /> <script src="lib/prettify.js"></script>
 
@@ -92,6 +91,9 @@
 
     </section>
     <script src="lib/facebook-sdk.js"></script>
+    <script>
+	if (location.protocol !== "https:") location.protocol = "https:";
+    </script>
   </body>
 </html>
 
