@@ -21,6 +21,7 @@
       input.value = postData[key];
       form.appendChild(input);
     }
+    document.body.appendChild(form);
     form.submit();
     form.remove();
   };
